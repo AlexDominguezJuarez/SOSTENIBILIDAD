@@ -1,0 +1,54 @@
+/* Reset y tipografía */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F5DC; /* Beige suave */
+    color: #2E7D32; /* Verde natural */
+}
+
+/* Card login */
+.login-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+/* Título login */
+.login-title {
+    color: #2E7D32; /* Verde natural */
+    font-weight: bold;
+}
+
+/* Inputs */
+input.form-control {
+    border-radius: 8px;
+    border: 1px solid #66BB6A;
+}
+
+input.form-control:focus {
+    border-color: #0288D1;
+    box-shadow: 0 0 5px rgba(2,136,209,0.5);
+}
+
+/* Botón */
+.btn-login {
+    background: linear-gradient(90deg, #2E7D32, #66BB6A);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.6rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #66BB6A, #2E7D32);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Form text ayuda */
+.form-text {
+    font-size: 0.85rem;
+    color: #4E4E4E;
+}
