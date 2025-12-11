@@ -21,14 +21,11 @@
 <section id="rutas" class="container my-5">
     <h2 class="text-center mb-4">Rutas disponibles</h2>
 
-    <div class="row g-4" id="rutasContainerHome">
-        <!-- Rutas cargadas por defecto -->
-    </div>
+    <div class="row g-4" id="rutasContainerHome"></div>
 </section>
 
-<!-- Footer -->
 <footer class="bg-dark text-light text-center py-3 mt-5">
-    EcoMeet © 2025 — Movilidad compartida para ciudades más sostenibles (ODS 11)
+    EcoMeet © 2025 — Movilidad compartida sostenible
 </footer>
 
 <script>
@@ -42,18 +39,35 @@
     const rutasContainerHome = document.getElementById('rutasContainerHome');
 
     rutasPorDefecto.forEach(ruta => {
-        const rutaCard = document.createElement('div');
-        rutaCard.classList.add('col-md-4');
-        rutaCard.innerHTML = `
-            <div class="card p-3 shadow-sm">
+        const card = document.createElement('div');
+        card.classList.add('col-md-4');
+        card.innerHTML = `
+            <div class="card p-3 shadow-sm ruta-card">
                 <h5 class="card-title">${ruta.origen} → ${ruta.destino}</h5>
                 <p>Salida: ${ruta.hora}</p>
                 <p>Plazas: ${ruta.plazas}</p>
-                <button class="btn btn-success w-100">Unirme</button>
             </div>
         `;
-        rutasContainerHome.appendChild(rutaCard);
+        rutasContainerHome.appendChild(card);
     });
+
+    // Abrir detalles de la ruta en nueva pestaña
+    setTimeout(() => {
+        document.querySelectorAll('.ruta-card').forEach(card => {
+            card.style.cursor = "pointer";
+
+            card.onclick = () => {
+                const origen = card.querySelector('.card-title').textContent.split(" → ")[0];
+                const destino = card.querySelector('.card-title').textContent.split(" → ")[1];
+                const hora = card.querySelector('p:nth-of-type(1)').textContent.replace("Salida: ", "");
+                const plazas = card.querySelector('p:nth-of-type(2)').textContent.replace("Plazas: ", "");
+
+                const url = `detalles-ruta.html?origen=${encodeURIComponent(origen)}&destino=${encodeURIComponent(destino)}&hora=${encodeURIComponent(hora)}&plazas=${encodeURIComponent(plazas)}`;
+
+                window.open(url, "_blank");
+            };
+        });
+    }, 300);
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

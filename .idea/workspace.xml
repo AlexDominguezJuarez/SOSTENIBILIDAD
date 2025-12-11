@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="413859ea-468e-4532-bea6-d76bba2d9952" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PROYECTO_SOSTENIBLE/fuentes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SOSTENIBILIDAD.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/PROYECTO_SOSTENIBLE/detalles-ruta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROYECTO_SOSTENIBLE/crear_ruta.html" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO_SOSTENIBLE/crear_ruta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROYECTO_SOSTENIBLE/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO_SOSTENIBLE/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +47,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.login.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/aledomjua/WebstormProjects/CLIENTE",
+    "last_opened_file_path": "/home/aledomjua/WebstormProjects/SOSTENIBILIDAD",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,6 +83,7 @@
       <workItem from="1763977052305" duration="8000" />
       <workItem from="1764851741401" duration="612000" />
       <workItem from="1764924462019" duration="7000" />
+      <workItem from="1765449667688" duration="2522000" />
     </task>
     <servers />
   </component>

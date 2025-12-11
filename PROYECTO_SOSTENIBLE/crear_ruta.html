@@ -33,7 +33,6 @@
                 <button type="submit" class="btn-login w-100">Crear Ruta</button>
             </form>
 
-            <!-- Botón de volver al menú principal -->
             <button id="btnVolver" class="btn btn-outline-success w-100 mt-3" style="display:none;">
                 Volver al Menú Principal
             </button>
@@ -51,28 +50,27 @@
     const rutasContainer = document.getElementById('rutasContainer');
     const btnVolver = document.getElementById('btnVolver');
 
-    // Función para cargar rutas desde LocalStorage
     function cargarRutas() {
         const rutas = JSON.parse(localStorage.getItem('rutas')) || [];
         rutasContainer.innerHTML = '';
+
         rutas.forEach(ruta => {
-            const rutaCard = document.createElement('div');
-            rutaCard.classList.add('col-md-4');
-            rutaCard.innerHTML = `
-                <div class="card p-3 shadow-sm">
+            const card = document.createElement('div');
+            card.classList.add('col-md-4');
+            card.innerHTML = `
+                <div class="card p-3 shadow-sm ruta-card">
                     <h5 class="card-title">${ruta.origen} → ${ruta.destino}</h5>
                     <p>Salida: ${ruta.hora}</p>
                     <p>Plazas: ${ruta.plazas}</p>
-                    <button class="btn btn-success w-100">Unirme</button>
                 </div>
             `;
-            rutasContainer.appendChild(rutaCard);
+            rutasContainer.appendChild(card);
         });
     }
 
     cargarRutas();
 
-    rutaForm.addEventListener('submit', function(e) {
+    rutaForm.addEventListener('submit', e => {
         e.preventDefault();
 
         const origen = document.getElementById('origen').value;
@@ -80,7 +78,7 @@
         const hora = document.getElementById('hora').value;
         const plazas = document.getElementById('plazas').value;
 
-        if(origen && destino && hora && plazas) {
+        if (origen && destino && hora && plazas) {
             const nuevaRuta = { origen, destino, hora, plazas };
             const rutas = JSON.parse(localStorage.getItem('rutas')) || [];
             rutas.push(nuevaRuta);
@@ -88,18 +86,13 @@
 
             cargarRutas();
             rutaForm.reset();
-
-            // Mostrar el botón de volver al menú
             btnVolver.style.display = 'block';
         } else {
-            alert('Por favor completa todos los campos');
+            alert('Completa todos los campos');
         }
     });
 
-    // Redirigir al menú principal
-    btnVolver.addEventListener('click', () => {
-        window.location.href = 'index.html';
-    });
+    btnVolver.onclick = () => window.location.href = "index.html";
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
