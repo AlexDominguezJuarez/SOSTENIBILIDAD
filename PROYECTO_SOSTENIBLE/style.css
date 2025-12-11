@@ -52,3 +52,39 @@ input.form-control:focus {
     font-size: 0.85rem;
     color: #4E4E4E;
 }
+
+/* Estilos generales para tarjetas (rutas) */
+.card-route, .card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    border: 1px solid #66BB6A;
+}
+
+.card-title {
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+/* Botón unir */
+.btn-success {
+    background-color: #2E7D32 !important;
+    border: none !important;
+}
+
+.btn-success:hover {
+    background-color: #1B5E20 !important;
+}
+
+/* Header */
+.hero, header {
+    background-color: #2E7D32 !important;
+    color: #fff !important;
+}
+
+/* Footer */
+footer {
+    background-color: #2E7D32 !important;
+    color: #fff;
+}
