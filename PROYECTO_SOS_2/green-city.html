@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>GreenCity | ODS 11 Ciudades y Comunidades Sostenibles</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <style>
+        #map { height: 500px; border-radius: 10px; margin-bottom: 20px; }
+        .success { display: none; color: green; margin-top: 10px; }
+        body { padding-top: 70px; }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">🌱 GreenCity</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#objetivos">Objetivos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#problemas">Problemas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#acciones">Qué podemos hacer</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tecnologia">Tecnología</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mapa">Mapa</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sugerencias">Sugerencias</a></li>
+                <li class="nav-item"><a class="nav-link" href="#fuentes">Fuentes</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Inicio -->
+<section id="inicio" class="container text-center my-5">
+    <h1>ODS 11: Ciudades y Comunidades Sostenibles</h1>
+    <p>Crear ciudades y asentamientos humanos inclusivos, seguros, resilientes y sostenibles, garantizando espacios verdes para mejorar la calidad de vida.</p>
+</section>
+
+<!-- Objetivos principales -->
+<section id="objetivos" class="container my-5">
+    <h2 class="mb-4">Objetivos principales</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Incrementar zonas verdes</h5>
+                    <p class="card-text">Aumentar la cantidad y calidad de espacios verdes accesibles para todos los ciudadanos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Transporte sostenible</h5>
+                    <p class="card-text">Fomentar medios de transporte menos contaminantes y accesibles.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Gestión de residuos</h5>
+                    <p class="card-text">Reducir residuos, fomentar reciclaje y mejorar la gestión urbana.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Problemas actuales -->
+<section id="problemas" class="container my-5">
+    <h2 class="mb-4">Problemas actuales</h2>
+    <p>Muchas ciudades presentan déficit de espacios verdes, altos niveles de contaminación, congestión y desigualdad en el acceso a servicios urbanos. Esto afecta la salud, bienestar y resiliencia frente al cambio climático.</p>
+</section>
+
+<!-- Qué podemos hacer -->
+<section id="acciones" class="container my-5">
+    <h2 class="mb-4">Qué podemos hacer</h2>
+    <ul>
+        <li>Participar en plantaciones y mantenimiento de parques.</li>
+        <li>Usar transporte público o bicicleta.</li>
+        <li>Proponer ideas de mejora urbana y espacios verdes.</li>
+        <li>Educar y concienciar sobre sostenibilidad urbana.</li>
+    </ul>
+</section>
+
+<!-- Tecnología y sostenibilidad -->
+<section id="tecnologia" class="container my-5">
+    <h2 class="mb-4">Tecnología y sostenibilidad</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Smart City Barcelona</h5>
+                    <p class="card-text">Plataforma tecnológica que monitoriza recursos y espacios urbanos para mejorar la sostenibilidad.</p>
+                    <a href="https://www.barcelona.cat/smartcity/en" target="_blank" class="btn btn-success">Visitar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Open Green Map</h5>
+                    <p class="card-text">Mapa colaborativo de espacios verdes accesibles y sostenibles.</p>
+                    <a href="https://www.opengreenmap.org/" target="_blank" class="btn btn-success">Visitar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mapa -->
+<section id="mapa" class="container my-5">
+    <h2 class="mb-4">Mapa interactivo de municipios</h2>
+    <div id="map"></div>
+</section>
+
+<!-- Formulario de sugerencias -->
+<section id="sugerencias" class="container my-5">
+    <h2 class="mb-4">Comparte la situación de zonas verdes en tu localidad</h2>
+    <form id="formulario">
+        <div class="mb-3">
+            <label for="municipio" class="form-label">Municipio donde vives</label>
+            <input type="text" class="form-control" id="municipio" placeholder="Escribe tu municipio" required>
+        </div>
+        <div class="mb-3">
+            <label for="situacion" class="form-label">Situación de las zonas verdes</label>
+            <select class="form-select" id="situacion" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="bajo">Pocas zonas verdes</option>
+                <option value="medio">Nivel medio</option>
+                <option value="alto">Buen nivel</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+        <p class="success" id="mensaje">¡Gracias por tu aportación!</p>
+    </form>
+</section>
+
+<!-- Fuentes -->
+<section id="fuentes" class="container my-5">
+    <h2 class="mb-4">Fuentes y créditos</h2>
+    <ul>
+        <li><a href="https://www.un.org/sustainabledevelopment/es/objetivos-de-desarrollo-sostenible/" target="_blank">ONU - Objetivos de Desarrollo Sostenible</a></li>
+        <li><a href="https://www.barcelona.cat/smartcity/en" target="_blank">Smart City Barcelona</a></li>
+        <li><a href="https://www.opengreenmap.org/" target="_blank">Open Green Map</a></li>
+    </ul>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    // Inicializar mapa
+    const map = L.map('map').setView([40.0, -3.5], 6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // Array de municipios
+    const municipios = [
+        {nombre: "Madrid", lat: 40.4168, lng: -3.7038, nivel: "medio", color: "orange"},
+        {nombre: "Barcelona", lat: 41.3851, lng: 2.1734, nivel: "medio", color: "orange"},
+        {nombre: "Valencia", lat: 39.4699, lng: -0.3763, nivel: "bajo", color: "red"},
+        {nombre: "Sevilla", lat: 37.3891, lng: -5.9845, nivel: "bajo", color: "red"},
+        {nombre: "Zaragoza", lat: 41.6488, lng: -0.8891, nivel: "medio", color: "orange"},
+        {nombre: "Málaga", lat: 36.7213, lng: -4.4214, nivel: "medio", color: "orange"},
+        {nombre: "Murcia", lat: 37.9922, lng: -1.1307, nivel: "medio", color: "orange"},
+        {nombre: "Palma de Mallorca", lat: 39.5696, lng: 2.6502, nivel: "alto", color: "green"},
+        {nombre: "Las Palmas de Gran Canaria", lat: 28.1235, lng: -15.4363, nivel: "medio", color: "orange"},
+        {nombre: "Bilbao", lat: 43.2630, lng: -2.9349, nivel: "alto", color: "green"},
+        {nombre: "Alicante", lat: 38.3452, lng: -0.4810, nivel: "medio", color: "orange"},
+        {nombre: "Córdoba", lat: 37.8882, lng: -4.7794, nivel: "medio", color: "orange"},
+        {nombre: "Valladolid", lat: 41.6523, lng: -4.7245, nivel: "medio", color: "orange"},
+        {nombre: "Vigo", lat: 42.2406, lng: -8.7207, nivel: "alto", color: "green"},
+        {nombre: "Gijón", lat: 43.5322, lng: -5.6611, nivel: "medio", color: "orange"},
+        {nombre: "Hospitalet de Llobregat", lat: 41.3667, lng: 2.1167, nivel: "medio", color: "orange"},
+        {nombre: "La Coruña", lat: 43.3623, lng: -8.4115, nivel: "alto", color: "green"},
+        {nombre: "Granada", lat: 37.1765, lng: -3.5979, nivel: "medio", color: "orange"},
+        {nombre: "Badalona", lat: 41.4500, lng: 2.2470, nivel: "medio", color: "orange"},
+        {nombre: "Cartagena", lat: 37.6059, lng: -0.9914, nivel: "medio", color: "orange"},
+        {nombre: "Almería", lat: 36.8340, lng: -2.4637, nivel: "medio", color: "orange"},
+        {nombre: "Vitoria-Gasteiz", lat: 42.8460, lng: -2.6716, nivel: "alto", color: "green"},
+        {nombre: "Oviedo", lat: 43.3619, lng: -5.8494, nivel: "alto", color: "green"},
+        {nombre: "Pamplona", lat: 42.8125, lng: -1.6458, nivel: "alto", color: "green"},
+        {nombre: "Salamanca", lat: 40.9701, lng: -5.6635, nivel: "medio", color: "orange"},
+        {nombre: "Badajoz", lat: 38.8794, lng: -6.9706, nivel: "medio", color: "orange"},
+        {nombre: "Castellón de la Plana", lat: 39.9864, lng: -0.0513, nivel: "medio", color: "orange"},
+        {nombre: "Villarreal", lat: 39.9300, lng: -0.0850, nivel: "medio", color: "orange"},
+        {nombre: "Benicàssim", lat: 40.0480, lng: -0.0460, nivel: "alto", color: "green"},
+        {nombre: "Burriana", lat: 39.9030, lng: -0.0700, nivel: "medio", color: "orange"},
+        {nombre: "Onda", lat: 39.9810, lng: -0.3160, nivel: "medio", color: "orange"},
+        {nombre: "Sagunto", lat: 39.6820, lng: -0.2690, nivel: "medio", color: "orange"},
+        {nombre: "Reus", lat: 41.1569, lng: 1.1071, nivel: "medio", color: "orange"},
+        {nombre: "Tarragona", lat: 41.1189, lng: 1.2445, nivel: "medio", color: "orange"},
+        {nombre: "Girona", lat: 41.9794, lng: 2.8214, nivel: "medio", color: "orange"},
+        {nombre: "Lleida", lat: 41.6176, lng: 0.6200, nivel: "medio", color: "orange"},
+        {nombre: "Mataró", lat: 41.5389, lng: 2.4449, nivel: "medio", color: "orange"},
+        {nombre: "Gandía", lat: 38.9673, lng: -0.1845, nivel: "medio", color: "orange"},
+        {nombre: "Alcoy", lat: 38.7065, lng: -0.4723, nivel: "medio", color: "orange"},
+        {nombre: "Elda", lat: 38.4823, lng: -0.7933, nivel: "medio", color: "orange"},
+        {nombre: "Orihuela", lat: 38.0846, lng: -0.9470, nivel: "medio", color: "orange"},
+        {nombre: "Denia", lat: 38.8406, lng: 0.1050, nivel: "medio", color: "orange"},
+        {nombre: "Elche", lat: 38.2699, lng: -0.7128, nivel: "medio", color: "orange"},
+        {nombre: "Alcantarilla", lat: 38.0100, lng: -1.1300, nivel: "medio", color: "orange"},
+        {nombre: "San Sebastián", lat: 43.3183, lng: -1.9812, nivel: "alto", color: "green"},
+        {nombre: "Santander", lat: 43.4623, lng: -3.8099, nivel: "alto", color: "green"},
+        {nombre: "Ourense", lat: 42.3351, lng: -7.8631, nivel: "alto", color: "green"},
+        {nombre: "Lugo", lat: 43.0099, lng: -7.5560, nivel: "alto", color: "green"},
+        {nombre: "Jaén", lat: 37.7796, lng: -3.7849, nivel: "medio", color: "orange"},
+        {nombre: "Huelva", lat: 37.2614, lng: -6.9447, nivel: "medio", color: "orange"},
+        {nombre: "León", lat: 42.5987, lng: -5.5671, nivel: "medio", color: "orange"},
+        {nombre: "Logroño", lat: 42.4668, lng: -2.4446, nivel: "medio", color: "orange"},
+        {nombre: "Burgos", lat: 42.3439, lng: -3.6969, nivel: "medio", color: "orange"},
+        {nombre: "Salou", lat: 41.0743, lng: 1.1426, nivel: "medio", color: "orange"},
+        {nombre: "Zamora", lat: 41.5036, lng: -5.7450, nivel: "medio", color: "orange"},
+        {nombre: "Palencia", lat: 42.0113, lng: -4.5320, nivel: "medio", color: "orange"},
+        {nombre: "Soria", lat: 41.7636, lng: -2.4660, nivel: "medio", color: "orange"},
+        {nombre: "Segovia", lat: 40.9481, lng: -4.1186, nivel: "medio", color: "orange"},
+        {nombre: "Teruel", lat: 40.3444, lng: -1.1069, nivel: "medio", color: "orange"},
+        {nombre: "Cuenca", lat: 40.0704, lng: -2.1374, nivel: "medio", color: "orange"},
+        {nombre: "Guadalajara", lat: 40.6333, lng: -3.1667, nivel: "medio", color: "orange"},
+        {nombre: "Toledo", lat: 39.8628, lng: -4.0273, nivel: "medio", color: "orange"},
+        {nombre: "Ciudad Real", lat: 38.9862, lng: -3.9273, nivel: "medio", color: "orange"},
+        {nombre: "Albacete", lat: 38.9943, lng: -1.8564, nivel: "medio", color: "orange"},
+        {nombre: "Talavera de la Reina", lat: 39.9641, lng: -4.8305, nivel: "medio", color: "orange"},
+        {nombre: "Orihuela", lat: 38.0846, lng: -0.9470, nivel: "medio", color: "orange"},
+        {nombre: "Benidorm", lat: 38.5411, lng: -0.1223, nivel: "medio", color: "orange"},
+        {nombre: "Gandia", lat: 38.9673, lng: -0.1845, nivel: "medio", color: "orange"},
+        {nombre: "Sagunto", lat: 39.6820, lng: -0.2690, nivel: "medio", color: "orange"},
+        {nombre: "Almassora", lat: 39.9760, lng: -0.0410, nivel: "medio", color: "orange"},
+        {nombre: "Onda", lat: 39.9810, lng: -0.3160, nivel: "medio", color: "orange"},
+        {nombre: "Vinaròs", lat: 40.4750, lng: 0.4740, nivel: "medio", color: "orange"},
+        {nombre: "Benicarló", lat: 40.4300, lng: 0.4560, nivel: "medio", color: "orange"},
+        {nombre: "Benicàssim", lat: 40.0480, lng: -0.0460, nivel: "alto", color: "green"},
+        {nombre: "Sagunto", lat: 39.6820, lng: -0.2690, nivel: "medio", color: "orange"}
+    ];
+
+    // Añadir círculos al mapa
+    municipios.forEach(m => {
+        L.circle([m.lat, m.lng], {
+            color: m.color,
+            fillColor: m.color,
+            fillOpacity: 0.5,
+            radius: 2000
+        }).addTo(map)
+            .bindPopup(`<strong>${m.nombre}</strong><br>Nivel de zonas verdes: ${m.nivel}`);
+    });
+
+    // Formulario de sugerencias
+    const formulario = document.getElementById('formulario');
+    const mensaje = document.getElementById('mensaje');
+
+    formulario.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const nombre = document.getElementById('municipio').value.trim();
+        const situacion = document.getElementById('situacion').value;
+        const colores = {bajo: 'red', medio: 'orange', alto: 'green'};
+
+        const coords = municipios.find(m => m.nombre.toLowerCase() === nombre.toLowerCase());
+
+        if (coords) {
+            L.circle([coords.lat, coords.lng], {
+                color: colores[situacion],
+                fillColor: colores[situacion],
+                fillOpacity: 0.5,
+                radius: 2000
+            }).addTo(map)
+                .bindPopup(`<strong>${nombre}</strong><br>Situación reportada: ${situacion}`)
+                .openPopup();
+        } else {
+            alert("Municipio no encontrado en el mapa, tu sugerencia ha sido registrada pero no se mostrará en el mapa.");
+        }
+
+        mensaje.style.display = 'block';
+        formulario.reset();
+    });
+</script>
+</body>
+</html>
