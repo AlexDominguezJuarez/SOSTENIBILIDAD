@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="413859ea-468e-4532-bea6-d76bba2d9952" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PROYECTO_SOSTENIBLE/detalles-ruta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PROYECTO_SOSTENIBLE/crear_ruta.html" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO_SOSTENIBLE/crear_ruta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PROYECTO_SOSTENIBLE/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO_SOSTENIBLE/index.html" afterDir="false" />
+    <list default="true" id="413859ea-468e-4532-bea6-d76bba2d9952" name="Changes" comment="sobraa">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROYECTO_SOS_2/green-city.html" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO_SOS_2/green-city.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +29,12 @@
     &quot;assignee&quot;: &quot;AlexDominguezJuarez&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/AlexDominguezJuarez/SOSTENIBILIDAD&quot;,
-    &quot;accountId&quot;: &quot;eb9911cf-b597-4ca4-9c85-10a22d09b84f&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AlexDominguezJuarez/SOSTENIBILIDAD",
+    "accountId": "c11d4c48-4aca-40ab-b63c-0247c3eb5dfe"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -56,7 +55,7 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/aledomjua/WebstormProjects/SOSTENIBILIDAD",
+    "last_opened_file_path": "C:/Users/Lenovo/WebStormProjects/SOSTENIBILIDAD",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,7 +68,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.26830.93" />
       </set>
     </attachedChunks>
   </component>
@@ -84,10 +83,15 @@
       <workItem from="1764851741401" duration="612000" />
       <workItem from="1764924462019" duration="7000" />
       <workItem from="1765449667688" duration="2522000" />
+      <workItem from="1767700828025" duration="341000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="sobraa" />
+    <option name="LAST_COMMIT_MESSAGE" value="sobraa" />
   </component>
 </project>
