@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="413859ea-468e-4532-bea6-d76bba2d9952" name="Changes" comment="sobraa">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PROYECTO_SOS_2/green-city.html" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO_SOS_2/green-city.html" afterDir="false" />
+    <list default="true" id="413859ea-468e-4532-bea6-d76bba2d9952" name="Changes" comment="terminado y listo">
+      <change beforePath="$PROJECT_DIR$/PROYECTO_SOS_2/green-city.html" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO_SOS_ODS11_ALEX/green-city.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +82,17 @@
       <workItem from="1764851741401" duration="612000" />
       <workItem from="1764924462019" duration="7000" />
       <workItem from="1765449667688" duration="2522000" />
-      <workItem from="1767700828025" duration="341000" />
+      <workItem from="1767700828025" duration="911000" />
     </task>
+    <task id="LOCAL-00001" summary="terminado y listo">
+      <option name="closed" value="true" />
+      <created>1767701232047</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1767701232047</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sobraa" />
-    <option name="LAST_COMMIT_MESSAGE" value="sobraa" />
+    <MESSAGE value="terminado y listo" />
+    <option name="LAST_COMMIT_MESSAGE" value="terminado y listo" />
   </component>
 </project>
